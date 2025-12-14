@@ -1,0 +1,185 @@
+._Protected_onkee_1 {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    background: #EABD3D;
+    border-radius: 2px;
+    color: #121212cc;
+    font-size: 12px;
+    padding: 0 4px;
+    line-height: 14px
+}
+
+._NameContainer_onkee_12 {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+._NameContainer_onkee_12 img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%
+}
+
+._NameContainer_onkee_12 ._Rocket_onkee_22 {
+    font-size: 16px
+}
+
+._NameContainer_onkee_12 ._Symbol_onkee_25 {
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap
+}
+
+._NameContainer_onkee_12 ._Symbol_onkee_25 svg {
+    display: block
+}
+
+._NameContainer_onkee_12 ._Name_onkee_12 {
+    font-size: 12px;
+    color: #fff9
+}
+
+._CollateralTypeHeader_onkee_40 {
+    display: flex;
+    align-items: center;
+    gap: 6px
+}
+
+._CollateralTypeHeader_onkee_40 svg {
+    font-size: 18px
+}
+
+._CollateralHeader_onkee_48 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: nowrap
+}
+
+._CollateralHeader_onkee_48 svg {
+    font-size: 16px
+}
+
+._TooltipContent_onkee_57 {
+    width: 300px
+}
+
+._TooltipContent_onkee_57 table {
+    margin-top: 12px
+}
+
+._TooltipContent_onkee_57 td:first-child {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
+._TooltipContent_onkee_57 td:first-child svg {
+    font-size: 14px
+}
+
+._TooltipContent_onkee_57 ._green_onkee_72 path {
+    fill: #16bf6a
+}
+
+._ApyTitle_onkee_75 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 4px
+}
+
+._ApyTitle_onkee_75 svg {
+    font-size: 18px
+}
+
+._ApyMainNumber_onkee_84 {
+    font-weight: 500;
+    white-space: nowrap
+}
+
+._ApyMainNumber_onkee_84._primary_onkee_88 {
+    color: #eabd3d
+}
+
+._ApySubNumber_onkee_91 {
+    color: #fff9;
+    font-size: 12px;
+    white-space: nowrap;
+    display: flex;
+    gap: 12px;
+    justify-content: end
+}
+
+._ApySubNumber_onkee_91 svg {
+    font-size: 12px;
+    position: relative;
+    top: 1px;
+    left: 4px
+}
+
+._ApySubNumber_onkee_91 svg rect {
+    fill: #fff9 !important
+}
+
+._ApySubNumber_onkee_91 svg circle,
+._ApySubNumber_onkee_91 svg path {
+    stroke: #fff9 !important
+}
+
+@media screen and (max-width: 960px) {
+    ._Name_mobile_onkee_113 {
+        display: none
+    }
+    ._ApyTitle_onkee_75,
+    ._CollateralHeader_onkee_48 {
+        color: #a2a2a2
+    }
+    ._ApyMainNumber_onkee_84 {
+        text-align: right
+    }
+}
+
+._MainNumber_1m61j_1 {
+    color: #fff;
+    font-weight: 500;
+    white-space: nowrap
+}
+
+._MainNumber_1m61j_1>span {
+    display: inline-block
+}
+
+._MainNumber_1m61j_1._primary_1m61j_9 {
+    color: #eabd3d
+}
+
+._SubNumber_1m61j_12 {
+    color: #fff9;
+    font-size: 12px;
+    white-space: nowrap
+}
+
+._SubNumber_1m61j_12>span {
+    display: inline-block
+}
+
+._Description_1m61j_20 {
+    margin-top: 6px;
+    color: #fff9;
+    font-size: 12px;
+    max-width: 400px;
+    white-space: normal
+}
+
+@media screen and (max-width: 960px) {
+    .ant-tooltip {
+        max-width: 90%
+    }
+}

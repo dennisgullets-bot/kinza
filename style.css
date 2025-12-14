@@ -1,0 +1,705 @@
+/* --- Global Reset & Body Styles --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* --- 1. PHISHING WARNING BAR --- */
+.phishing-warning-bar {
+  background-color: #ffc107;
+  color: #333333;
+  text-align: center;
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.phishing-warning-bar .close-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #333333;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* --- 2. NAVIGATION / HEADER --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333333;
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+}
+
+.logo-and-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* --- Logo Sizing (Using !important for stability) --- */
+.logo-svg-container {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  gap: 8px !important;
+  font-size: 20px !important;
+}
+.logo-svg-container svg {
+  display: block !important;
+}
+.logo-svg-container ._LogoIcon_1wyv1_73 {
+  width: 25px !important;
+  height: 25px !important;
+}
+.logo-svg-container ._LogoText_1wyv1_77 {
+  height: 25px !important;
+  width: 90px !important;
+}
+
+/* Desktop Nav Links */
+.nav-link-custom {
+  color: #cccccc !important;
+  text-decoration: none !important;
+  margin-right: 20px !important;
+  font-size: 15px !important;
+  padding-bottom: 5px !important;
+  transition: color 0.3s;
+}
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: #ffffff !important;
+  border-bottom: 2px solid #ffd700 !important;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* --- DROPDOWN STYLING OVERRIDES --- */
+.chain-select-btn {
+  background-color: #222222 !important;
+  border: 1px solid #444444 !important;
+  color: #ffffff !important;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: normal;
+  padding-right: 12px !important;
+}
+
+.dropdown-menu-dark {
+  background-color: #222222 !important;
+  border: 1px solid #444444 !important;
+  margin-top: 10px;
+}
+.dropdown-item-custom {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px;
+  padding: 10px 15px;
+  color: #ffffff !important;
+  font-size: 15px !important;
+}
+.dropdown-item-custom:hover,
+.dropdown-item-custom.active {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
+.chain-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile Toggler (Hamburger Icon) Style */
+.mobile-menu-toggler {
+  border: 1px solid #333333;
+  padding: 0.25rem 0.5rem;
+}
+.mobile-menu-toggler .navbar-toggler-icon {
+  /* Custom white hamburger icon */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---------------------------------------------------- */
+/* --- MOBILE MENU (Offcanvas) CUSTOMIZATION --- */
+/* ---------------------------------------------------- */
+
+.mobile-menu-offcanvas {
+  /* Full-screen overlay */
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: #1a1a1a !important;
+
+  /* Custom Animation: Make it ease in from the top */
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Offcanvas Header Styling (for the Close button) */
+.offcanvas-header {
+  padding: 20px 40px;
+  border-bottom: none;
+}
+
+/* Offcanvas Close Button */
+.mobile-menu-close {
+  opacity: 1;
+  font-size: 24px;
+}
+
+/* Offcanvas Body Styling */
+.offcanvas-body {
+  padding: 0 40px 40px 40px;
+}
+
+/* Mobile Nav Links Styling */
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-nav-item {
+  display: block;
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 0;
+  transition: color 0.3s;
+}
+
+.mobile-nav-item:hover {
+  color: #ffffff;
+}
+
+.mobile-nav-item.airdrop-link {
+  color: #ffd700; /* Highlighted Airdrop link color */
+}
+
+/* Mobile Action Buttons Styling (Connect Wallet) */
+.mobile-action-buttons .btn {
+  height: 60px;
+  font-size: 18px;
+  background-color: #ffd700 !important;
+  color: #121212 !important;
+  border: none !important;
+}
+
+/* --- 3. MAIN DASHBOARD CONTENT AND METRICS --- */
+.dashboard-content {
+  background-image: url("images/header-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 0;
+}
+
+.metrics-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  padding: 100px 40px 80px 40px;
+}
+
+/* Adjust metrics container for mobile spacing */
+@media (max-width: 767.98px) {
+  .metrics-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 20px 60px 20px;
+  }
+}
+
+.metric-card {
+  text-align: left;
+}
+
+.metric-card .value {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+/* Adjusted font size for metric values on mobile */
+@media (max-width: 767.98px) {
+  .metric-card .value {
+    font-size: 40px;
+  }
+}
+
+.metric-card .label {
+  font-size: 16px;
+  color: #aaaaaa;
+}
+
+/* --- 4. RESPONSIVE BANNER SECTION --- */
+.banner-section {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.market-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; /* Ensure it respects block sizing/margins */
+  margin: 0 auto;
+}
+
+/* Adjust padding on mobile */
+@media (max-width: 991.98px) {
+  .banner-section {
+    padding: 0 20px;
+  }
+}
+
+/* --- 5. MARKETS SECTION --- */
+
+.markets-section {
+  padding: 40px 40px 100px 40px !important;
+}
+
+/* Adjust padding for mobile */
+@media (max-width: 991.98px) {
+  .markets-section {
+    padding: 40px 20px 80px 20px !important;
+  }
+}
+
+.markets-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Category Filters (Pills) */
+.market-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-pill {
+  background-color: #333333;
+  color: #cccccc;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.filter-pill:hover {
+  background-color: #444444;
+}
+
+.filter-pill.active {
+  background-color: #ffd700;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+/* --- Desktop Table Styles --- */
+
+.markets-table-wrapper {
+  background-color: #222222;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Desktop Table Header (d-none d-lg-flex) */
+.markets-table-header {
+  display: flex;
+  padding: 15px 25px;
+  background-color: #2e2e2e;
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.markets-table-header > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.info-icon,
+.sort-icon {
+  font-size: 12px;
+  margin-left: 5px;
+  color: #777777;
+}
+
+.sort-icon {
+  transform: rotate(180deg);
+}
+
+/* Desktop Column Widths (using Flex basis for division) */
+.markets-table-header .col-assets,
+.market-row .col-assets {
+  flex: 0 0 15%;
+}
+.markets-table-header .col-collateral,
+.market-row .col-collateral {
+  flex: 0 0 10%;
+}
+.markets-table-header .col-ltv,
+.market-row .col-ltv {
+  flex: 0 0 10%;
+}
+.markets-table-header .col-supply,
+.market-row .col-supply {
+  flex: 0 0 12%;
+}
+.markets-table-header .col-supplied,
+.market-row .col-supplied {
+  flex: 0 0 14%;
+}
+.markets-table-header .col-borrow,
+.market-row .col-borrow {
+  flex: 0 0 12%;
+}
+.markets-table-header .col-borrowed,
+.market-row .col-borrowed {
+  flex: 0 0 14%;
+}
+.markets-table-header .col-available,
+.market-row .col-available {
+  flex: 0 0 13%;
+}
+
+/* --- Desktop Table Rows --- */
+
+.market-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  border-top: 1px solid #333333;
+  transition: background-color 0.2s;
+  margin: 0 !important; /* Reset margin */
+}
+
+.market-row:hover {
+  background-color: #2e2e2e;
+}
+
+/* Special Highlighted Row (USDT in image) */
+.market-row.highlighted-row {
+  background-color: #383212;
+}
+
+/* Cell Styling (Applies to desktop cells primarily) */
+.market-cell {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.asset-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.market-row .col-assets {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Collateral Pill */
+.collateral-pill {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.collateral-pill.open {
+  background-color: #1a331a;
+  color: #66cc66;
+}
+
+/* Value Breakdown & Token Incentive Styling */
+.market-cell .value-main {
+  font-weight: bold;
+}
+.market-cell .value-breakdown {
+  font-size: 12px;
+  color: #aaaaaa;
+}
+/* Note: The HTML uses a literal '@' symbol, not a class, but we preserve the intent */
+.market-cell .col-supply .value-breakdown {
+  /* This targets the value breakdown in the Supply column */
+}
+.market-cell .value-breakdown .token-incentive {
+  color: #ffd700;
+}
+
+/* Borrow APY desktop highlight */
+.market-row .col-borrow .value-main {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* ---------------------------------------------------- */
+/* --- MOBILE TABLE RESPONSIVENESS (BELOW 992px) --- */
+/* ---------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+  /* Nav padding adjust (re-centering the mobile action buttons) */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  /* Hide the desktop header */
+  .markets-table-header {
+    display: none;
+  }
+
+  /* Change table rows to stacked cards for mobile */
+  .market-row {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px 20px;
+    margin-bottom: 15px !important; /* Add margin between cards */
+    border-radius: 8px; /* Give rows a card look */
+    border: 1px solid #333333; /* Border for the card look */
+    background-color: #222222;
+    border-top: none; /* Handled by the row border */
+  }
+
+  /* Remove wrapper styling, we style rows as cards */
+  .markets-table-wrapper {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  /* Resetting DESKTOP-ONLY cells to display: none (LTV, Collateral, Available are explicitly hidden in HTML for mobile, so we just set order for the rest) */
+
+  /* Asset cell styling for mobile (Top of the card) */
+  .market-row .col-assets {
+    order: 1;
+    margin-bottom: 5px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+  }
+  .market-row .col-assets .asset-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .market-row .col-assets .asset-subtitle {
+    font-size: 14px;
+    color: #aaaaaa;
+    font-weight: normal;
+    margin-left: 5px;
+    display: block !important;
+  }
+
+  /* Stack other data points on separate lines, setting the order */
+  .market-cell:not(.col-assets) {
+    display: flex !important;
+    flex-basis: auto !important;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px dashed #333333;
+    width: 100%;
+  }
+
+  /* Define Mobile Order for the 4 visible data points */
+  .market-row .col-supply {
+    order: 2;
+    border-top: none;
+    padding-top: 0;
+  }
+  .market-row .col-supplied {
+    order: 3;
+  }
+  .market-row .col-borrow {
+    order: 4;
+  }
+  .market-row .col-borrowed {
+    order: 5;
+  }
+
+  /* Force display: none for elements that are present but only for desktop (Collateral, LTV, Available) */
+  .market-row .col-collateral,
+  .market-row .col-ltv,
+  .market-row .col-available {
+    display: none !important;
+  }
+
+  /* Label the data in mobile view (Using pseudo-elements for labels) */
+  .market-cell:not(.col-assets)::before {
+    font-size: 13px;
+    color: #aaaaaa;
+    text-transform: capitalize;
+    white-space: nowrap;
+    content: attr(
+      data-mobile-label
+    ); /* Use attribute if available, otherwise fallback to hardcoded content */
+  }
+
+  /* Hardcoded content for labels (for cells lacking the data-mobile-label attribute) */
+  .market-cell.col-supply::before {
+    content: "Supply APY";
+  }
+  .market-cell.col-supplied::before {
+    content: "Total Supplied";
+  }
+  .market-cell.col-borrow::before {
+    content: "Borrow APY";
+  }
+  .market-cell.col-borrowed::before {
+    content: "Total Borrowed";
+  }
+
+  /* Value side styling */
+  .market-cell .value-main,
+  .market-cell .value-breakdown {
+    text-align: right;
+    /* Force main value to be displayed, it's often hidden by flex rules on desktop */
+    display: block !important;
+  }
+  .market-cell .value-main {
+    font-size: 18px;
+  }
+  .market-cell .value-breakdown {
+    margin-top: 2px;
+  }
+
+  /* Special style for Borrow APY */
+  .market-row .col-borrow .value-main {
+    color: #ffd700;
+  }
+
+  /* --- Mobile Actions Block --- */
+  .market-actions {
+    order: 6;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+    margin-top: 5px;
+    border-top: 1px dashed #333333;
+  }
+
+  .market-actions .btn {
+    flex: 1;
+    font-size: 15px;
+    padding: 10px 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    height: auto;
+  }
+
+  .market-actions .mobile-supply-btn {
+    background-color: #ffd700 !important;
+    color: #1a1a1a !important;
+    border: none;
+  }
+
+  .market-actions .mobile-details-btn {
+    background-color: #333333 !important;
+    color: #cccccc !important;
+    border: 1px solid #444444;
+  }
+}
+
+/* --- Custom Styles for Mobile Tabs Only --- */
+
+.custom-mobile-tabs {
+  /* Ensure no wrapping and full width across mobile */
+  display: flex;
+  padding: 0 1rem; /* Add side padding if needed */
+}
+
+/* Base button styling (Dark background for inactive tabs) */
+.custom-mobile-tabs .nav-link {
+  background-color: #212529; /* Dark background matching the table */
+  color: #fff; /* White text */
+  padding: 0.75rem 0.5rem;
+  border: none;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Active tab styling (Gold background, Black text) */
+.custom-mobile-tabs .nav-link.active {
+  background-color: #ffc107; /* Matches the gold/yellow color */
+  color: #000; /* Black text for contrast */
+}
+
+/* Apply rounded corners to the ends of the tab group */
+.custom-mobile-tabs .nav-item:first-child .nav-link {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.custom-mobile-tabs .nav-item:last-child .nav-link {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.points-ranking-table thead tr th {
+  background-color: #1a1a1a;
+}
+/* Custom CSS to dim the footer text if needed */
+.footer-custom .footer-text {
+  color: #aaaaaa !important; /* Matches the new logo color */
+}
+
+/* Custom CSS for the specific Claim Airdrop button style */
+.btn-airdrop-claim {
+  /* Background Color */
+  background-color: #ffc107;
+  /* Dark Text Color */
+  color: #1a1a1a;
+  /* Font style adjustment (assuming dark gray background) */
+  font-size: 1.25rem; /* Larger text */
+  font-weight: bold;
+  padding: 0.75rem 2rem; /* Vertical and horizontal padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  border: none;
+  /* Subtle Shadow for depth, matching the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  /* Remove outline on focus */
+  outline: none;
+  /* Ensure the link text decoration is removed */
+  text-decoration: none;
+}
+
+/* Optional: Slightly darker hover state */
+.btn-airdrop-claim:hover {
+  background-color: #ddaa33;
+  color: #1a1a1a;
+}

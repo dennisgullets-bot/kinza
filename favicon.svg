@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>KINZA LOGO W</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1506.000000, -5830.000000)">
+            <g id="KINZA-LOGO-W" transform="translate(1506.000000, 5830.000000)">
+                <rect fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="88" height="88" rx="44"></rect>
+                <rect fill="#EABD3D" fill-rule="nonzero" x="24" y="37" width="10" height="20"></rect>
+                <rect fill="#EABD3D" fill-rule="nonzero" x="54" y="37" width="10" height="20"></rect>
+                <path d="M44,78 C62.7777,78 78,62.7777 78,44 C78,25.2223 62.7777,10 44,10 C25.2223,10 10,25.2223 10,44 C10,62.7777 25.2223,78 44,78 Z M44,88 C68.3005,88 88,68.3005 88,44 C88,19.6995 68.3005,0 44,0 C19.6995,0 0,19.6995 0,44 C0,68.3005 19.6995,88 44,88 Z" fill="#EABD3D"></path>
+                <path d="M44,21 L47.2404,23.7414 C55.1088,30.3982 64.5688,35.3297 75,37.9153 L72.604,48 C62.0563,45.3855 52.3563,40.6709 44,34.3304 C35.6437,40.6709 25.9437,45.3855 15.396,48 L13,37.9153 C23.4312,35.3297 32.8912,30.3982 40.7597,23.7414 L44,21 Z" fill="#EABD3D"></path>
+                <path d="M44,43 L46.9732,45.1161 C56.5086,51.9027 68.5221,56.896 82,59.2199 L80.247,69 C66.6996,66.6642 54.3163,61.8576 44,55.1725 C33.6837,61.8576 21.3004,66.6642 7.75297,69 L6,59.2199 C19.4779,56.896 31.4914,51.9027 41.0268,45.1161 L44,43 Z" fill="#EABD3D"></path>
+            </g>
+        </g>
+    </g>
+</svg>

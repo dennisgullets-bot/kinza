@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinza Finance</title>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard-content">
+      <header class="navbar">
+        <div class="logo-and-menu">
+          <a href="#/" class="logo-svg-container">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="_LogoIcon_1wyv1_73"
+            >
+              <g id="Frame 17">
+                <rect
+                  id="Rectangle 82"
+                  x="8"
+                  y="12"
+                  width="3"
+                  height="6"
+                  fill="white"
+                ></rect>
+                <rect
+                  id="Rectangle 83"
+                  x="17"
+                  y="12"
+                  width="3"
+                  height="6"
+                  fill="white"
+                ></rect>
+                <circle
+                  id="Ellipse 37"
+                  cx="14"
+                  cy="14"
+                  r="12.5"
+                  stroke="white"
+                  stroke-width="3"
+                ></circle>
+                <path
+                  id="Vector"
+                  d="M23.3322 13.5788C19.8289 12.7286 16.6479 11.1062 13.9989 8.91211C11.3499 11.1062 8.16879 12.7286 4.66553 13.5788"
+                  stroke="white"
+                  stroke-width="3"
+                ></path>
+                <path
+                  id="Vector_2"
+                  d="M25.6678 20.5484C21.2126 19.7652 17.208 18.0771 14.0011 15.75C10.7943 18.0771 6.78971 19.7652 2.33447 20.5484"
+                  stroke="white"
+                  stroke-width="3"
+                ></path>
+              </g>
+            </svg>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 72 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="_LogoText_1wyv1_77"
+            >
+              <g id="KINZA">
+                <path
+                  d="M0 20V0H4.33891V8.17284L7.63552 0H11.8775L8.24151 9.03704L12.0472 20H7.63552L4.79947 11.1605L4.33891 11.9506V20H0Z"
+                  fill="white"
+                ></path>
+                <path d="M17.6558 20V0H21.9947V20H17.6558Z" fill="white"></path>
+                <path
+                  d="M28.8008 20V0H31.855L35.8788 9.62963V0H39.4663V20H36.5333L32.5095 9.62963V20H28.8008Z"
+                  fill="white"
+                ></path>
+                <path
+                  d="M45.5152 20V17.3333L50.3147 2.98766H45.7334V0H54.5809V2.49383L49.7087 17.0123H54.6294V20H45.5152Z"
+                  fill="white"
+                ></path>
+                <path
+                  d="M59.6862 20L63.3949 0H68.3398L72 20H68.0004L67.346 15.7778H64.4614L63.7827 20H59.6862ZM64.8493 13.1358H66.9339L65.8916 5.33333L64.8493 13.1358Z"
+                  fill="white"
+                ></path>
+              </g>
+            </svg>
+          </a>
+
+          <nav class="nav-links d-none d-lg-flex">
+            <a href="#" class="active nav-link-custom">Market</a>
+            <a href="#" class="nav-link-custom">Dashboard</a>
+            <a href="#" class="nav-link-custom">Utilities</a>
+            <a href="#" class="nav-link-custom">Analysis</a>
+            <a href="#" class="nav-link-custom">BTC Staking</a>
+          </nav>
+        </div>
+
+        <div class="user-actions d-none d-lg-flex align-items-center gap-3">
+          <a
+            href="/Kinza-connect.html"
+            class="btn btn-warning fw-bold"
+            role="button"
+          >
+            Airdrop
+          </a>
+
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle chain-select-btn"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="/images/bnb.svg"
+                alt="BNB Chain"
+                class="chain-icon me-2"
+              />
+              <span class="chain-name">BNB Chain</span>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow-lg"
+              id="chain-dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item active dropdown-item-custom"
+                  href="/Kinza-connect.html"
+                >
+                  <img
+                    src="/images/bnb.svg"
+                    alt="BNB Chain"
+                    class="chain-icon me-2"
+                  />BNB Chain</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item dropdown-item-custom"
+                  href="/Kinza-connect.html"
+                >
+                  <img
+                    src="/images/bnb.svg"
+                    alt="opBNB"
+                    class="chain-icon me-2"
+                  />opBNB</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item dropdown-item-custom"
+                  href="/Kinza-connect.html"
+                >
+                  <img
+                    src="/images/tokens/eth.svg"
+                    alt="Ethereum"
+                    class="chain-icon me-2"
+                  />Ethereum</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item dropdown-item-custom"
+                  href="/Kinza-connect.html"
+                >
+                  <img
+                    src="/images/mantle.svg"
+                    alt="Mantle"
+                    class="chain-icon me-2"
+                  />Mantle</a
+                >
+              </li>
+            </ul>
+          </div>
+          <script>
+            function selectChain(chainId) {
+              // 1. Update the displayed chain name and icon in the button
+              const button = document.querySelector(".chain-select-btn");
+              const chainNameSpan = button.querySelector(".chain-name");
+
+              // Example logic to update the button text
+              if (chainNameSpan) {
+                chainNameSpan.textContent = chainId;
+              }
+
+              // 2. Perform the actual network switch or update the UI based on the chainId
+              console.log("Chain selected:", chainId);
+              // Example: call a Web3 library function here
+              // switchNetwork(chainId);
+            }
+          </script>
+
+          <a
+            href="/Kinza-connect.html"
+            class="btn btn-warning btn-lg fw-bold w-100"
+            role="button"
+          >
+            Connect Wallet
+          </a>
+        </div>
+
+        <div
+          class="mobile-header-actions d-flex d-lg-none align-items-center gap-2"
+        >
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle chain-select-btn"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="/images/bnb.svg"
+                alt="BNB Chain"
+                class="chain-icon me-2"
+              />
+              <span class="chain-name">BNB Chain</span>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow-lg"
+              id="chain-dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item active dropdown-item-custom"
+                  href="/Kinza-connect.html"
+                >
+                  <img
+                    src="/images/bnb.svg"
+                    alt="BNB Chain"
+                    class="chain-icon me-2"
+                  />BNB Chain</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item dropdown-item-custom"
+                  href="/Kinza-connect.html"
+                >
+                  <img
+                    src="/images/bnb.svg"
+                    alt="opBNB"
+                    class="chain-icon me-2"
+                  />opBNB</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item dropdown-item-custom"
+                  href="/Kinza-connect.html"
+                >
+                  <img
+                    src="/images/tokens/eth.svg"
+                    alt="Ethereum"
+                    class="chain-icon me-2"
+                  />Ethereum</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item dropdown-item-custom"
+                  href="/Kinza-connect.html"
+                >
+                  <img
+                    src="/images/mantle.svg"
+                    alt="Mantle"
+                    class="chain-icon me-2"
+                  />Mantle</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="navbar-toggler mobile-menu-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      <div
+        class="offcanvas offcanvas-top mobile-menu-offcanvas"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header justify-content-end">
+          <button
+            type="button"
+            class="btn-close btn-close-white mobile-menu-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column align-items-center">
+          <nav class="mobile-nav-links w-100 mb-5">
+            <a href="#" class="mobile-nav-item active">Market</a>
+            <a href="#" class="mobile-nav-item">Dashboard</a>
+            <a href="#" class="mobile-nav-item">Analysis</a>
+            <a href="#" class="mobile-nav-item">BTC Staking</a>
+            <a href="#" class="mobile-nav-item airdrop-link">Airdrop</a>
+          </nav>
+
+          <div class="mobile-action-buttons w-100 mt-auto d-grid gap-3">
+            <a
+              href="/Kinza-connect.html"
+              class="btn btn-warning btn-lg fw-bold w-100"
+              role="button"
+            >
+              Connect Wallet
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <div class="metrics-container">
+          <div class="metric-card">
+            <div class="value">$10.57M</div>
+            <div class="label">Total Value Locked</div>
+          </div>
+          <div class="metric-card">
+            <div class="value">$2.74M</div>
+            <div class="label">Total Borrows</div>
+          </div>
+          <div class="metric-card">
+            <div class="value">$7.83M</div>
+            <div class="label">Total Available</div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <section class="banner-section">
+      <img
+        src="/images/market-banner-db05bb1f.png"
+        alt="Market Banner Desktop"
+        class="img-fluid market-banner d-none d-md-block"
+      />
+
+      <img
+        src="/images/market-banner-mobile-fe0ff443.png"
+        alt="Market Banner Mobile"
+        class="img-fluid market-banner d-block d-md-none"
+      />
+
+      <div class="container py-3">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-4">
+            <a
+              href="/Kinza-connect.html"
+              class="btn btn-airdrop-claim w-100"
+              role="button"
+            >
+              Claim Airdrop
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="d-none d-lg-block">
+        <h2 class="display-6 mb-5 text-white">My Points Ranking</h2>
+        <div class="table-responsive mb-5">
+          <table
+            class="table table-dark table-borderless text-white points-ranking-table p-5"
+          >
+            <thead>
+              <tr>
+                <th class="col-2">Ranking</th>
+                <th class="col-6">Address</th>
+                <th class="col-4 text-end">Total Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>--</td>
+                <td>0x00....0000</td>
+                <td class="text-end">0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="display-6 mb-5 text-white">My Referral Ranking</h2>
+        <div class="table-responsive">
+          <table
+            class="table table-dark table-borderless text-white points-ranking-table"
+          >
+            <thead class="bg-dark">
+              <tr>
+                <th class="col-2">Ranking</th>
+                <th class="col-6">Address</th>
+                <th class="col-4 text-end">Total Referees TVL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="text-warning">🏆 1</span></td>
+                <td>0xf9...6e67</td>
+                <td class="text-end">$661.66K</td>
+              </tr>
+              <tr>
+                <td><span class="text-warning">🏆 2</span></td>
+                <td>0x6F...5244</td>
+                <td class="text-end">$336.28K</td>
+              </tr>
+              <tr>
+                <td><span class="text-warning">🏆 3</span></td>
+                <td>0x05...E515</td>
+                <td class="text-end">$298.48K</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>0x94...A2BF</td>
+                <td class="text-end">$288.23K</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>0xc4...9C6a</td>
+                <td class="text-end">$283.03K</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>0x5D...871f</td>
+                <td class="text-end">$163.85K</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>0x95...E152</td>
+                <td class="text-end">$146.28K</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>0xF2...8F7c</td>
+                <td class="text-end">$112.42K</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>0x8D...A4b7</td>
+                <td class="text-end">$103.76K</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>0x39...Ef7A</td>
+                <td class="text-end">$101.30K</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="d-block d-lg-none">
+        <ul
+          class="nav nav-pills custom-mobile-tabs mb-4"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item flex-fill" role="presentation">
+            <button
+              class="nav-link active"
+              id="pills-points-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-points"
+              type="button"
+              role="tab"
+              aria-controls="pills-points"
+              aria-selected="true"
+            >
+              My Points Ranking
+            </button>
+          </li>
+          <li class="nav-item flex-fill" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-referral-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-referral"
+              type="button"
+              role="tab"
+              aria-controls="pills-referral"
+              aria-selected="false"
+            >
+              My Referral Ranking
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="pills-points"
+            role="tabpanel"
+            aria-labelledby="pills-points-tab"
+          >
+            <h2 class="display-6 mb-4 text-white">My Points Ranking</h2>
+            <div class="table-responsive">
+              <table
+                class="table table-dark table-borderless text-white points-ranking-table p-5"
+              >
+                <thead>
+                  <tr>
+                    <th class="col-2">Ranking</th>
+                    <th class="col-6">Address</th>
+                    <th class="col-4 text-end">Total Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>--</td>
+                    <td>0x00....0000</td>
+                    <td class="text-end">0.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="pills-referral"
+            role="tabpanel"
+            aria-labelledby="pills-referral-tab"
+          >
+            <h2 class="display-6 mb-4 text-white">My Referral Ranking</h2>
+            <div class="table-responsive">
+              <table
+                class="table table-dark table-borderless text-white points-ranking-table"
+              >
+                <thead class="bg-dark">
+                  <tr>
+                    <th class="col-2">Ranking</th>
+                    <th class="col-6">Address</th>
+                    <th class="col-4 text-end">Total Referees TVL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="text-warning">🏆 1</span></td>
+                    <td>0xf9...6e67</td>
+                    <td class="text-end">$661.66K</td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-warning">🏆 2</span></td>
+                    <td>0x6F...5244</td>
+                    <td class="text-end">$336.28K</td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-warning">🏆 3</span></td>
+                    <td>0x05...E515</td>
+                    <td class="text-end">$298.48K</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>0x94...A2BF</td>
+                    <td class="text-end">$288.23K</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>0xc4...9C6a</td>
+                    <td class="text-end">$283.03K</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>0x5D...871f</td>
+                    <td class="text-end">$163.85K</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>0x95...E152</td>
+                    <td class="text-end">$146.28K</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>0xF2...8F7c</td>
+                    <td class="text-end">$112.42K</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>0x8D...A4b7</td>
+                    <td class="text-end">$103.76K</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>0x39...Ef7A</td>
+                    <td class="text-end">$101.30K</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-custom py-4">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center text-white"
+      >
+        <a
+          href="#/"
+          class="logo-svg-container d-flex align-items-center mb-3 mb-lg-0 order-0 order-lg-1"
+        >
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="_LogoIcon_1wyv1_73 me-2"
+          >
+            <g id="Frame 17">
+              <rect
+                id="Rectangle 82"
+                x="8"
+                y="12"
+                width="3"
+                height="6"
+                fill="#AAAAAA"
+              ></rect>
+              <rect
+                id="Rectangle 83"
+                x="17"
+                y="12"
+                width="3"
+                height="6"
+                fill="#AAAAAA"
+              ></rect>
+              <circle
+                id="Ellipse 37"
+                cx="14"
+                cy="14"
+                r="12.5"
+                stroke="#AAAAAA"
+                stroke-width="3"
+              ></circle>
+              <path
+                id="Vector"
+                d="M23.3322 13.5788C19.8289 12.7286 16.6479 11.1062 13.9989 8.91211C11.3499 11.1062 8.16879 12.7286 4.66553 13.5788"
+                stroke="#AAAAAA"
+                stroke-width="3"
+              ></path>
+              <path
+                id="Vector_2"
+                d="M25.6678 20.5484C21.2126 19.7652 17.208 18.0771 14.0011 15.75C10.7943 18.0771 6.78971 19.7652 2.33447 20.5484"
+                stroke="#AAAAAA"
+                stroke-width="3"
+              ></path>
+            </g>
+          </svg>
+
+          <svg
+            width="72"
+            height="20"
+            viewBox="0 0 72 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="_LogoText_1wyv1_77"
+          >
+            <g id="KINZA">
+              <path
+                d="M0 20V0H4.33891V8.17284L7.63552 0H11.8775L8.24151 9.03704L12.0472 20H7.63552L4.79947 11.1605L4.33891 11.9506V20H0Z"
+                fill="#AAAAAA"
+              ></path>
+              <path d="M17.6558 20V0H21.9947V20H17.6558Z" fill="#AAAAAA"></path>
+              <path
+                d="M28.8008 20V0H31.855L35.8788 9.62963V0H39.4663V20H36.5333L32.5095 9.62963V20H28.8008Z"
+                fill="#AAAAAA"
+              ></path>
+              <path
+                d="M45.5152 20V17.3333L50.3147 2.98766H45.7334V0H54.5809V2.49383L49.7087 17.0123H54.6294V20H45.5152Z"
+                fill="#AAAAAA"
+              ></path>
+              <path
+                d="M59.6862 20L63.3949 0H68.3398L72 20H68.0004L67.346 15.7778H64.4614L63.7827 20H59.6862ZM64.8493 13.1358H66.9339L65.8916 5.33333L64.8493 13.1358Z"
+                fill="#AAAAAA"
+              ></path>
+            </g>
+          </svg>
+        </a>
+
+        <div
+          class="footer-text text-center text-lg-start order-1 order-lg-0 text-secondary"
+        >
+          2025 KINZA Foundation. All Rights Reserved <br />
+          <small>Privacy Policy Terms of Use</small>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
